@@ -1,0 +1,98 @@
+:root {
+  --very-dark-drayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(360, 100%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+
+  font-size: 0.8125rem;
+  font-family: sans-serif;
+
+  background-color: var(--grayish-blue);
+
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.heading {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card__image > img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 374px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.desktop {
+  display: none;
+}
+
+.card {
+  border-radius: 0.5rem;
+  color: var(--desaturated-dark-blue);
+  background-color: var(--white);
+}
+
+.card__content {
+  padding: 0.5rem 1.5rem;
+}
+
+.card__title {
+  color: var(--very-dark-drayish-blue);
+}
+
+.card__description {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.card__footer {
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: bold;
+  color: var(--very-dark-drayish-blue);
+}
+
+.social img {
+  border-radius: 50%;
+  background-color: var(--light-grayish-blue);
+  padding: 0.5rem;
+}
