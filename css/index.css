@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+/*
+ * Global styles
+ */
+
 body {
   max-width: 1400px;
   width: 80%;
@@ -27,24 +31,41 @@ body {
   place-content: center;
 }
 
+/*
+ * Typography
+ */
+
 .heading {
   font-family: "Manrope", sans-serif;
   line-height: 1.6;
 }
 
+/*
+ * Components
+ *  1. Image
+ *  2. Card
+ *  3. User
+ *  4, Social
+ *
+ */
+
+/*
+ * Image
+ */
+
 img {
   max-width: 100%;
 }
 
-.card__image > img {
+/*
+ * Card
+ */
+
+.card__image {
   border-radius: 0.5rem 0.5rem 0 0;
   width: 374px;
   height: 200px;
   object-fit: cover;
-}
-
-.desktop {
-  display: none;
 }
 
 .card {
@@ -59,11 +80,13 @@ img {
 
 .card__title {
   color: var(--very-dark-drayish-blue);
+  max-width: 25ch;
 }
 
 .card__description {
   line-height: 1.5;
   font-size: 0.9rem;
+  max-width: 45ch;
 }
 
 .card__footer {
@@ -73,6 +96,10 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+/*
+ * User
+ */
 
 .user {
   display: flex;
@@ -91,8 +118,74 @@ img {
   color: var(--very-dark-drayish-blue);
 }
 
-.social img {
+/*
+ * Social
+ */
+
+.share > img {
   border-radius: 50%;
   background-color: var(--light-grayish-blue);
   padding: 0.5rem;
+}
+
+.share {
+  position: relative;
+  cursor: pointer;
+}
+
+.share:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  border: 0.5rem solid transparent;
+  border-top-color: var(--very-dark-drayish-blue);
+  transform-origin: top center;
+}
+
+.share:hover > .social {
+  opacity: 1;
+}
+
+.social {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  transition: 150ms transform;
+  transform-origin: bottom center;
+  opacity: 0;
+
+  border-radius: 0.5rem;
+  background-color: var(--very-dark-drayish-blue);
+  padding: 0.1rem 0.3rem;
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+  column-gap: 0.2rem;
+}
+
+.social img {
+  padding: 0.5rem;
+}
+
+.social-text {
+  color: var(--grayish-blue);
+  align-self: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+  .card {
+    display: flex;
+  }
+  .card__image {
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 400px;
+    min-height: 300px;
+  }
+
+  .card__image {
+    width: 50%;
+  }
 }
