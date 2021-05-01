@@ -80,7 +80,9 @@ img {
 
 .card__title {
   color: var(--very-dark-drayish-blue);
-  max-width: 25ch;
+  font-size: 1.2rem;
+  max-width: 28ch;
+  margin: 0;
 }
 
 .card__description {
@@ -91,6 +93,7 @@ img {
 
 .card__footer {
   padding: 1rem 1.5rem;
+  position: relative;
 
   display: flex;
   justify-content: space-between;
@@ -128,41 +131,28 @@ img {
   padding: 0.5rem;
 }
 
-.share {
-  position: relative;
-  cursor: pointer;
-}
-
-.share:hover::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  border: 0.5rem solid transparent;
-  border-top-color: var(--very-dark-drayish-blue);
-  transform-origin: top center;
-}
-
-.share:hover > .social {
+.card__footer:hover > .social {
   opacity: 1;
 }
 
 .social {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -200%);
   transition: 150ms transform;
   transform-origin: bottom center;
   opacity: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
 
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   background-color: var(--very-dark-drayish-blue);
   padding: 0.1rem 0.3rem;
-  width: 200px;
 
   display: flex;
   justify-content: center;
-  column-gap: 0.2rem;
+  column-gap: 0.5rem;
+  align-items: center;
 }
 
 .social img {
@@ -175,7 +165,7 @@ img {
   text-transform: uppercase;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 600px) {
   .card {
     display: flex;
   }
@@ -185,7 +175,42 @@ img {
     min-height: 300px;
   }
 
-  .card__image {
-    width: 50%;
+  .social {
+    all: unset;
+    position: absolute;
+    right: 5%;
+    bottom: calc(100% - 0.1rem);
+    transform: translate(25%, 0%);
+    transition: 150ms transform;
+    transform-origin: bottom center;
+    opacity: 0;
+
+    border-radius: 0.5rem;
+    background-color: var(--very-dark-drayish-blue);
+    padding: 0.1rem 0.3rem;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 0.2rem;
+  }
+
+  .social > img {
+    width: 30px;
+  }
+
+  .share {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .card__footer:hover::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    bottom: 80%;
+    transform: translate(40%, 0);
+    border: 0.5rem solid transparent;
+    border-top-color: var(--very-dark-drayish-blue);
+    transform-origin: top center;
   }
 }
