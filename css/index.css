@@ -171,8 +171,8 @@ img {
   }
   .card__image {
     border-radius: 0.5rem 0 0 0.5rem;
-    width: 400px;
-    min-height: 300px;
+    width: 300px;
+    min-height: 262px;
   }
 
   .social {
