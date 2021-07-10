@@ -120,7 +120,7 @@ img {
 .user__details {
   display: flex;
   align-items: center;
-  gap: var(--sm-spacer);
+  gap: calc(var(--sm-spacer) / 2);
 }
 
 .user__image {
@@ -187,6 +187,7 @@ img {
   cursor: pointer;
 }
 
-.share:hover ~ .social {
+.share:hover ~ .social,
+.share:focus ~ .social {
   opacity: 1;
 }
