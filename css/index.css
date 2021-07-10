@@ -16,7 +16,7 @@
   --fs-base: 0.9375rem;
 
   --fw-normal: 500;
-  --fw-bold: 700;
+  --fw-bold: 600;
 
   --ff-default: sans-serif;
   --ff-alt: "Manrope", sans-serif;
@@ -123,6 +123,11 @@ img {
   gap: calc(var(--sm-spacer) / 2);
 }
 
+.user__name {
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-alt);
+}
+
 .user__image {
   width: 3rem;
   border-radius: 50%;
@@ -159,15 +164,15 @@ img {
     height: calc(var(--sm-spacer) / 2);
 
     position: absolute;
-    right: calc(var(--sm-spacer) / 2);
+    right: 50%;
     bottom: -1rem;
   }
 
   .social {
-    right: 0;
-    left: 30%;
+    right: -50%;
+    left: 80%;
     bottom: 40%;
-    transform: translateX(-10%);
+    transform: translateX(-30%);
     border-radius: var(--border-radius);
   }
 }
@@ -180,7 +185,7 @@ img {
   align-self: center;
   background-color: var(--light-grayish-blue);
   border-radius: 50%;
-  padding: calc(var(--sm-spacer) / 2);
+  padding: calc(var(--sm-spacer) / 3);
 
   color: inherit;
   text-decoration: none;
