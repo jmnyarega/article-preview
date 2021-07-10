@@ -11,7 +11,8 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
       rel="stylesheet"
@@ -21,10 +22,9 @@
   </head>
   <body>
     <div class="card">
-      <img src="images/drawers.jpg" alt="drawers" class="card__image" />
-      <!-- <div class="card__image"></div> -->
-      <div class="card-body">
-        <div class="card__content">
+      <div class="card__image"></div>
+      <div class="card__body">
+        <div class="card__content container">
           <h3 class="card__title heading">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -35,11 +35,11 @@
             you make any room feel complete.
           </p>
         </div>
-        <div class="card__footer">
-          <div class="user">
+        <div class="card__footer container">
+          <div class="user__details container">
             <img
               src="images/avatar-michelle.jpg"
-              class="display-image"
+              class="user__image"
               alt="Michelle Appleton"
             />
             <div class="user-details">
@@ -47,26 +47,33 @@
               <div class="user-date">28 Jun 2020</div>
             </div>
           </div>
-          <div class="social">
-            <span class="social-text">Share</span>
-            <img
-              class="facebook desktop"
-              src="images/icon-facebook.svg"
-              alt="facebook"
-            />
-            <img
-              class="twitter desktop"
-              src="images/icon-twitter.svg"
-              alt="twitter"
-            />
-            <img
-              class="pinterest desktop"
-              src="images/icon-pinterest.svg"
-              alt="pinterest"
-            />
-          </div>
-          <div class="share">
+
+          <a href="#" class="share">
             <img src="images/icon-share.svg" alt="share" />
+          </a>
+          <div class="social">
+            <span>Share</span>
+            <a href="#">
+              <img
+                class="facebook desktop"
+                src="images/icon-facebook.svg"
+                alt="facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="twitter desktop"
+                src="images/icon-twitter.svg"
+                alt="twitter"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="pinterest desktop"
+                src="images/icon-pinterest.svg"
+                alt="pinterest"
+              />
+            </a>
           </div>
         </div>
       </div>
