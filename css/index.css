@@ -28,43 +28,37 @@ img {
 .card {
   border-radius: 0.5rem;
   background-color: white; }
-
-.card__image {
-  border-radius: 0.5rem 0.5rem 0 0;
-  background: no-repeat url(../images/drawers.jpg);
-  background-position: bottom right;
-  background-size: cover;
-  min-height: 15rem; }
-
-.card__content {
-  padding-bottom: 2rem;
-  padding-top: 2rem; }
-
-.card__body {
-  position: relative; }
-
-.card__title {
-  font-family: "Manrope", sans-serif;
-  font-size: 1.2rem;
-  color: #48556a;
-  max-width: 25ch;
-  padding-bottom: 1rem;
-  line-height: 1.2; }
-
-.card__description {
-  max-width: 45ch; }
-
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  .card__image {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: no-repeat url(../images/drawers.jpg);
+    background-position: bottom right;
+    background-size: cover;
+    min-height: 15rem; }
+  .card__content {
+    padding-bottom: 2rem;
+    padding-top: 2rem; }
+  .card__body {
+    position: relative; }
+  .card__title {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.2rem;
+    color: #48556a;
+    max-width: 25ch;
+    padding-bottom: 1rem;
+    line-height: 1.2; }
+  .card__description {
+    max-width: 45ch; }
+  .card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 @media (min-width: 65em) {
   .card {
     display: flex; }
-  .card__image {
-    border-radius: 0.5rem 0 0 0.5rem;
-    width: clamp(20rem, 30rem, 40rem); } }
+    .card__image {
+      border-radius: 0.5rem 0 0 0.5rem;
+      width: clamp(20rem, 30rem, 40rem); } }
 
 .user__details {
   display: flex;
@@ -121,11 +115,12 @@ img {
   align-self: center;
   background-color: #ecf2f8;
   border-radius: 50%;
-  padding: 0.66667rem;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
   z-index: 2; }
+  .share img {
+    padding: 0.5rem; }
 
 input {
   display: none; }
