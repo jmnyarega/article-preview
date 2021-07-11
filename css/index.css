@@ -135,3 +135,6 @@ input[type="checkbox"]:checked ~ .social {
 
 input[type="checkbox"]:checked ~ label {
   background-color: #ecf2f8; }
+  @media (min-width: 65em) {
+    input[type="checkbox"]:checked ~ label {
+      background-color: #48556a; } }

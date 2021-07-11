@@ -201,4 +201,7 @@ input[type="checkbox"]:checked ~ .social {
 
 input[type="checkbox"]:checked ~ label {
   background-color: $light-grayish-blue;
+  @media (min-width: 65em) {
+    background-color: $very-dark-drayish-blue;
+  }
 }
